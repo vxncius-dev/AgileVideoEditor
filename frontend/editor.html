@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Video Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body data-page="editor">
+    <main class="player-editor">
+        <video id="preview" class="preview-video"></video>
+        <div id="stage" class="stage" tabindex="0"></div>
+
+        <header class="floating-title">
+            <a href="index.html" class="icon-button" title="Voltar">←</a>
+            <div>
+                <p class="name"></p>
+                <h1 id="projectTitle">Projeto</h1>
+            </div>
+        </header>
+
+        <nav class="left-tools" aria-label="Ferramentas">
+            <button id="addText" type="button" title="Texto">T</button>
+            <button id="addImage" type="button" title="Imagem">▧</button>
+            <button id="addVideo" type="button" title="Video">▶</button>
+            <button id="addAudio" type="button" title="Audio">♪</button>
+            <button id="toggleTimeline" type="button" title="Timeline">▤</button>
+        </nav>
+
+        <aside id="inspector" class="inspector">
+            <h2 id="inspectorTitle">Sem seleção</h2>
+            <div id="inspectorFields" class="inspector-fields"></div>
+        </aside>
+
+        <section id="timelineDock" class="timeline-dock">
+            <div class="timeline-ruler" id="timelineRuler"></div>
+            <div id="timeline" class="timeline-strip"></div>
+            <div class="timeline-options">
+                <span id="saveStatus">Carregando</span>
+                <span id="timecode">0.00s</span>
+                <button id="play" type="button">Play</button>
+                <button id="save" type="button">Salvar</button>
+                <button id="export" type="button">Exportar</button>
+                <button id="zoomOut" type="button">-</button>
+                <button id="zoomIn" type="button">+</button>
+                <input id="assetPath" type="text" placeholder="Caminho do arquivo">
+                <button id="importAsset" type="button">Importar</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
